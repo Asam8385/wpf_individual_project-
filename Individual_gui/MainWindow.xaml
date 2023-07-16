@@ -1,0 +1,143 @@
+﻿<Window x:Class="Individual_gui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Individual_gui" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        Title="MainWindow" Height="740" Width="1200">
+    <Grid  Background="#D3D3D3">
+
+
+
+
+        <Border CornerRadius="50 50 15 30" Background="#D3D3D3"  Margin="0,-1,0,4"  >
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid  Grid.Row="1">
+
+
+                    <Frame  x:Name="contentframe"  NavigationUIVisibility="Hidden"  Width="1200" Height="580" />
+
+
+
+
+                </Grid>
+
+
+                <Border BorderBrush="Transparent"  Background="White" CornerRadius="0 0 340 60">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150px"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="Images/LOGO_OF_RUHUNA.png"
+                           Grid.Column="0"
+                           Width="100"
+                           Height="100"
+                           Margin="0 0 0 0"/>
+                        <StackPanel  Grid.Column="1" Orientation="Vertical" Margin="0" >
+                            <StackPanel  Margin="0">
+
+                                <TextBlock Text="Faculty of Engineering"
+                                   FontSize="40"
+                                   FontWeight="SemiBold"
+                                   Foreground="DarkGreen"/>
+                                <TextBlock Text="University of Ruhuna"
+                                   FontSize="32" 
+                                   FontWeight="DemiBold"
+                                   Foreground="GreenYellow" 
+                                   HorizontalAlignment="Left"/>
+
+                            </StackPanel>
+
+
+
+
+
+                            <StackPanel    Orientation="Horizontal" Height="61"  >
+                                <Button   Margin="0"   Foreground="Black"    Style="{StaticResource menuButton}"  Height="57" Click="Button_Click" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource menuButtonIcon}"/>
+                                        <TextBlock FontWeight="Bold" Padding="5 0 30 0" x:Name="createproduct"  Text="Add Student"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button  Margin="0"   Foreground="Black"   Style="{StaticResource menuButton}"  Height="57" Click="Button_Click_1" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="ViewArrayOutline" Style="{StaticResource menuButtonIcon}"/>
+                                        <TextBlock   FontWeight="Bold" Padding="5 0 30 0" x:Name="readproduct" Text="View Student"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button  Margin="0"   Style="{StaticResource menuButton}"   Foreground="Black" Height="57" Click="Button_Click_2" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="Update" Style="{StaticResource menuButtonIcon}"/>
+                                        <TextBlock  FontWeight="Bold" Padding="5 0 30 0" x:Name="update" Text="Update Details"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button  Margin="0"  Foreground="Black" Style="{StaticResource menuButton}"  Height="57" Click="Button_Click_3">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="Delete" Style="{StaticResource menuButtonIcon}"/>
+                                        <TextBlock  FontWeight="Bold" Padding="5 0 30 0" x:Name="Delete" Text="Delete Student"/>
+                                    </StackPanel>
+                                </Button>
+
+                                <Button  Margin="0" Foreground="Black" Style="{StaticResource menuButton}"  Height="57" Click="Button_Click_4" >
+                                    <StackPanel Orientation="Horizontal">
+                                        <Icon:PackIconMaterial Kind="OrderBoolAscending" Style="{StaticResource menuButtonIcon}"/>
+                                        <TextBlock  FontWeight="Bold" Padding="5 0 20 0" Name="cart" Text="Rank"/>
+                                    </StackPanel>
+                                </Button>
+
+                            </StackPanel>
+
+
+
+                        </StackPanel>
+
+                    </Grid>
+
+                </Border>
+                <Button  BorderBrush="Transparent" Style="{StaticResource mainbtn2}"  Margin="1047,21,-25,90" Click="Button_Click_5" RenderTransformOrigin="0.5,0.5">
+                    
+                    <StackPanel Orientation="Horizontal" >
+                        <Icon:PackIconMaterial  Kind="Close" Style="{StaticResource menuButtonIcon}" />
+                    </StackPanel>
+                </Button>
+
+                <Button  BorderBrush="Transparent" Style="{StaticResource mainbtn2}"  Margin="975,21,47,90" Click="Button_Click_6" RenderTransformOrigin="0.5,0.5">
+
+                    <StackPanel Orientation="Horizontal" >
+                        <Icon:PackIconMaterial  Kind="Minus" Style="{StaticResource menuButtonIcon}" />
+                    </StackPanel>
+                </Button>
+
+            </Grid>
+
+            <!--Main Section-->
+
+
+
+
+
+
+
+
+
+
+        </Border>
+
+    </Grid>
+</Window>

@@ -1,0 +1,80 @@
+﻿<Page x:Class="Individual_gui.Views.DeleteStudent"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Individual_gui.Views"
+      xmlns:VM="clr-namespace:Individual_gui.VM"
+      mc:Ignorable="d" 
+      Height="580" Width="1200"
+      Title="UserD">
+
+    <Page.DataContext>
+        <VM:ViewModel/>
+    </Page.DataContext>
+
+    <Grid Background="#D3D3D3" Margin="0,0,0,0">
+        <Border CornerRadius="10" BorderBrush="Transparent" BorderThickness="4" Margin="0,-10,0,0">
+            <DataGrid BorderBrush="Transparent"  x:Name="StudentsDataGridView"
+                         
+                          ItemsSource="{Binding Student}"
+                          ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle}"
+                          RowStyle="{DynamicResource DataGridRowStyle}"  
+                          CellStyle="{DynamicResource DataGridCellStyle}" 
+                          Style="{DynamicResource DataGridStyle}"
+                          SelectedItem="{Binding Selectedstudent}" Margin="0,20,0,0" >
+
+                <DataGrid.Columns>
+
+
+                    <DataGridTemplateColumn Header="Gender"
+                                                Width="70">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image  Source="{Binding ImgUrl}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTextColumn Header="Full Name"
+                                            Binding="{Binding FullName}" 
+                                            IsReadOnly="True" Width="*"/>
+
+
+
+                    <DataGridTextColumn Header="Date of Birth" 
+                                            Binding="{Binding DoB}"
+                                            Width="*"
+                                            IsReadOnly="True" />
+
+                    <DataGridTextColumn Header="GPA" 
+                                            Binding="{Binding Gpa}"
+                                            Width="*"
+                                            IsReadOnly="True" />
+
+                    <DataGridTextColumn Header="Department" 
+                                            Binding="{Binding Department}"
+                                            Width="*"
+                                            IsReadOnly="True"/>
+
+
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
+        <Button  Command="{Binding deleteCommand}"  Margin="510,524,512,0" 
+            x:Name="btnLogin"                          
+            BorderThickness="0"
+            Content="Delete User"
+            FontSize="12"
+            FontFamily="Montserrat"
+            Cursor="Hand"
+                 Style="{StaticResource mainbtn}"
+                           />
+
+
+
+
+    </Grid>
+</Page>

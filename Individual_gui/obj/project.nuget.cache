@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "TMMZY8PZFQUwlAeyZLnVHvSIVTMfYJ2BQqpj9zmniDHJjk0uaiAThDqI0gRUFqGEzEMf6Ht2bDAsJKsan6d4Mw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASAM\\Desktop\\Individual_gui\\Individual_gui\\Individual_gui.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASAM\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0\\communitytoolkit.mvvm.8.2.0.nupkg.sha512",
+    "C:\\Users\\ASAM\\.nuget\\packages\\mahapps.metro.iconpacks\\4.11.0\\mahapps.metro.iconpacks.4.11.0.nupkg.sha512",
+    "C:\\Users\\ASAM\\.nuget\\packages\\mahapps.metro.iconpacks.material\\4.11.0\\mahapps.metro.iconpacks.material.4.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}

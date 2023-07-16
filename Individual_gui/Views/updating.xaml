@@ -1,0 +1,196 @@
+﻿<Window x:Class="Individual_gui.Views.updating"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Individual_gui.Views"
+      mc:Ignorable="d" 
+      WindowStartupLocation="CenterScreen"
+      xmlns:VM="clr-namespace:Individual_gui.VM"
+      AllowsTransparency="True"
+      Background="Transparent"
+      WindowStyle="None"
+      d:DesignHeight="620" d:DesignWidth="800"
+      Title="updating">
+    <Window.DataContext>
+        <VM:ViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <Border   CornerRadius="25" Background="Wheat" Margin="144,7,184,2" >
+
+            <StackPanel >
+                <TextBlock 
+                   
+                    HorizontalAlignment="Center"
+                    Text="FIRST NAME"
+                   Background="Transparent"
+                           Margin="10 25 10 0"
+                FontSize="20"
+                FontWeight="Bold"
+                FontFamily="OCR A Extended">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="gray"/>
+                            <GradientStop Color="#FF080707" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+
+                <TextBox  Text="{Binding Firstname}"  x:Name="txtUser"
+                FontSize="15"
+                        
+                Margin="10 0 10 20"
+                FontWeight="Medium"
+                Background="Transparent"
+                FontFamily="Montserrat"                            
+                Foreground="Black"
+                CaretBrush="Black"
+                BorderBrush="Black"
+                BorderThickness="0,0,0,2"
+                Height="28"
+                VerticalContentAlignment="Center"
+                          HorizontalAlignment="Center"
+                Padding="5,0,0,0" Width="200"/>
+
+
+                <TextBlock Text="LAST NAME"
+                Margin="10 5 10 0"
+                FontSize="20"
+                            HorizontalAlignment="Center"
+                Background="Transparent"
+                FontWeight="Bold"
+                FontFamily="OCR A Extended">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="gray"/>
+                            <GradientStop Color="#FF080707" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+
+
+                <TextBox Text="{Binding Lastname}" x:Name="pass"
+                FontSize="15" Margin="10 0 10 20"
+                 Background="Transparent"
+                FontWeight="Medium"
+                FontFamily="Montserrat"                            
+                Foreground="Black"
+                CaretBrush="Black"
+                BorderBrush="Black"
+                BorderThickness="0,0,0,2"
+                Height="28"
+                         HorizontalAlignment="Center"
+                VerticalContentAlignment="Center"
+                Padding="5,0,0,0" Width="200"/>
+
+                <TextBlock Text="Gender"
+                            HorizontalAlignment="Center"
+            
+            Background="Transparent" Margin="10 5 10 20"
+            FontSize="20"
+            FontWeight="Bold"
+            FontFamily="OCR A Extended">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="gray"/>
+                            <GradientStop Color="#FF080707" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+                <CheckBox IsChecked="{Binding Femalechecker}" 
+                           FontSize="20"  Margin="10 0 10 0" Content="FEMALE" Width="98" FontFamily="OCR A Extended" />
+                <CheckBox HorizontalAlignment="Center" IsChecked="{Binding Malechecker}" 
+                          FontSize="20"  Margin="10 0 10 20"  Content="MALE"  FontFamily="Lucida Console"/>
+
+
+                <TextBlock Text="DATE OF BIRTH" 
+            Foreground="Black"
+            FontSize="20" Margin="10 5 10 20"
+            FontWeight="bold"
+                            HorizontalAlignment="Center"
+            FontFamily="OCR A Extended"/>
+
+                <DatePicker   Width="250" HorizontalAlignment="Center" SelectedDate="{Binding Dob}" 
+                             Background="Transparent" Margin="10 0 10 20"  >
+                </DatePicker>
+
+                <TextBlock Text="GPA"
+                            HorizontalAlignment="Center"
+             Margin="10 5 10 0"
+            FontSize="20"
+            FontWeight="Medium"
+            FontFamily="OCR A Extended">
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="gray"/>
+                            <GradientStop Color="#FF080707" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+
+
+                <TextBox Text="{Binding Gpa}" x:Name="pass_Copy"
+            FontSize="15" 
+            Background="Transparent"  
+            FontWeight="Medium"
+            FontFamily="Montserrat"
+                          HorizontalAlignment="Center"
+            Foreground="Black"
+            CaretBrush="Black"
+            BorderBrush="Black"
+            Margin="10 0 10 20"
+            BorderThickness="0,0,0,2"
+            Height="28"
+                    
+            VerticalContentAlignment="Center"
+            Padding="5,0,0,0" Width="200"/>
+
+                <TextBlock Text="DEPARTMENT"  HorizontalAlignment="Center"
+            Margin="10 5 10 0"
+            FontSize="20"
+            FontWeight="Medium"
+            FontFamily="OCR A Extended" >
+                    <TextBlock.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="gray"/>
+                            <GradientStop Color="#FF080707" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TextBlock.Foreground>
+                </TextBlock>
+
+           <TextBox Text="{Binding Department}" 
+                     HorizontalAlignment="Center"
+                    x:Name="txtUser_Copy"
+            FontSize="15" Margin="10 0 10 20"
+            FontWeight="Medium"
+            Background="Transparent"
+            FontFamily="Montserrat"                            
+            Foreground="Black"
+            CaretBrush="Black"
+            BorderBrush="Black"
+            BorderThickness="0,0,0,2"
+            Height="28"
+          
+            VerticalContentAlignment="Center"
+            Padding="5,0,0,0"  Width="200" />
+                
+            <Button
+                Command="{Binding updateCommand}"
+                x:Name="btnLogin"                          
+                BorderThickness="0"
+                Content="Update"
+                FontSize="12"
+                 HorizontalAlignment="Center"
+                       
+                        Margin="20"
+                FontFamily="Montserrat"
+                Cursor="Hand" 
+                Style="{StaticResource AddButton}" 
+                Width="150" Height="50" Click="btnLogin_Click"
+                            />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

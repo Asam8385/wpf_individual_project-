@@ -1,0 +1,61 @@
+﻿<Page x:Class="Individual_gui.Views.rank"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Individual_gui.Views"
+      mc:Ignorable="d" 
+      xmlns:VM="clr-namespace:Individual_gui.VM"
+      d:DesignHeight="580" d:DesignWidth="1200"
+      Title="rank">
+    <Page.DataContext>
+       <VM:ViewModel/>
+    </Page.DataContext>
+
+    <Grid Margin="0,0,0,0" Background="#D3D3D3">
+        <DataGrid x:Name="StudentsDataGridView"
+                         Background="Transparent"
+                          ItemsSource="{Binding Ranks}"
+                          ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle}"
+                          RowStyle="{DynamicResource DataGridRowStyle}"  
+                          CellStyle="{DynamicResource DataGridCellStyle}" 
+                          Style="{DynamicResource DataGridStyle}"
+                          SelectedItem="{Binding Selectedstudent}" Margin="0 20 0 0" >
+
+            <DataGrid.Columns>
+
+
+                <DataGridTemplateColumn Header="Profile"
+                                                Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image  Source="{Binding ImgUrl}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTextColumn FontWeight="Bold" Header="Full Name"
+                                            Binding="{Binding FullName}" 
+                                            IsReadOnly="True" Width="*"/>
+
+
+
+               
+
+                <DataGridTextColumn  FontWeight="Bold" Header="GPA" 
+                                            Binding="{Binding Gpa}"
+                                            Width="*"
+                                            IsReadOnly="True" />
+
+                <DataGridTextColumn  FontWeight="Bold" Header="Department" 
+                                            Binding="{Binding Department}"
+                                            Width="*"
+                                            IsReadOnly="True"/>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
